@@ -50,7 +50,7 @@ const ListingCard = ({
   const patchWishList = async () => {
     if (user?._id !== creator._id) {
       const response = await fetch(
-        `https://home-rental-backend.onrender.com//users/${user?._id}/${listingId}`,
+        `https://home-rental-backend.onrender.com/users/${user?._id}/${listingId}`,
         {
           method: "PATCH",
           headers: {
@@ -81,7 +81,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`https://home-rental-backend.onrender.com//${photo?.replace("public", "")}`}
+                src={`https://home-rental-backend.onrender.com/${photo?.replace("public", "")}`}
                 alt={`${index + 1}`}
               />
               <div

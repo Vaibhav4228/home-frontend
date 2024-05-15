@@ -15,8 +15,8 @@ const Listings = () => {
   const getFeedListings = useCallback(async () => {
     try {
       const url = selectedCategory !== "All"
-        ? `https://home-rental-backend.onrender.com//properties?category=${selectedCategory}`
-        : "https://home-rental-backend.onrender.com//properties";
+        ? `https://home-rental-backend.onrender.com/properties?category=${selectedCategory}`
+        : "https://home-rental-backend.onrender.com/properties";
       const response = await fetch(url, { method: "GET" });
       const data = await response.json();
       dispatch(setListings({ listings: data }));

@@ -21,7 +21,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `https://home-rental-backend.onrender.com//properties/${listingId}`,
+        `https://home-rental-backend.onrender.com/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -72,7 +72,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       };
 
-      const response = await fetch("https://home-rental-backend.onrender.com//bookings/create", {
+      const response = await fetch("https://home-rental-backend.onrender.com/bookings/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const ListingDetails = () => {
           {listing.listingPhotoPaths?.map((item, index) => (
             <img
               key={index} // Added key prop for each image
-              src={`https://home-rental-backend.onrender.com//${item.replace("public", "")}`}
+              src={`https://home-rental-backend.onrender.com/${item.replace("public", "")}`}
               alt={` ${index + 1}`} // Improved alt text
             />
           ))}
@@ -121,7 +121,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={`https://home-rental-backend.onrender.com//${listing.creator.profileImagePath.replace(
+            src={`https://home-rental-backend.onrender.com/${listing.creator.profileImagePath.replace(
               "public",
               ""
             )}`}

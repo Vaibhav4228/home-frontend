@@ -12,7 +12,7 @@ function LoginPage() {
     e.preventDefault()
 
     try {
-      const response = await fetch ("https://home-rental-backend.onrender.com//auth/login", {
+      const response = await fetch ("https://home-rental-backend.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
