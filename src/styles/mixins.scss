@@ -1,0 +1,14 @@
+// _mixins.scss
+
+@mixin lg {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin mm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
